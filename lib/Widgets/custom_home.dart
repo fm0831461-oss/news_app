@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+import 'package:news_app/Models/artical_model.dart';
+import 'package:news_app/Screens/home_screen.dart';
+
+class CustomHome extends StatelessWidget {
+  final ArticalModel aetical;
+  const CustomHome({super.key, required this.aetical});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => HomeScreen()),
+      ),
+      child: Card(
+        elevation: 5,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.network(
+              aetical.imgeUrl,
+              errorBuilder: (context, error, stackTrace) =>
+                  Icon(Icons.broken_image),
+            ),
+            Text(aetical.title),
+            Text(aetical.description),
+          ],
+        ),
+      ),
+    );
+  }
+}
