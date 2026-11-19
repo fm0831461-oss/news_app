@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/Providers/auth_provider.dart';
-import 'package:news_app/Providers/home_provider.dart';
-import 'package:news_app/Screens/signup_screen.dart';
+import 'package:news_app/NewApp1/Providers/auth_provider.dart';
+import 'package:news_app/NewApp1/Providers/home_provider.dart';
+import 'package:news_app/NewApp1/Screens/signup_screen.dart';
+
 import 'package:provider/provider.dart';
 
 void main() {

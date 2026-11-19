@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
-import 'package:news_app/Models/auth-model.dart';
+import 'package:news_app/NewApp1/Models/auth-model.dart';
 
 class AuthServices {
   static Dio dio = Dio();
-  static Future<AuthModel> Login({
+  static Future<AuthModel> login({
     required String password,
     required String email,
   }) async {
@@ -13,14 +13,14 @@ class AuthServices {
         data: {"Email": email, "Password": password},
       );
       return AuthModel.fromJson(response.data);
-    } on DioException catch (DioError) {
-      throw Exception(DioError.message);
+    } on DioException catch (dioError) {
+      throw Exception(dioError.message);
     } catch (other) {
       throw Exception(("Other Error ${other.toString()}"));
     }
   }
 
-  static Future<AuthModel> Sign({
+  static Future<AuthModel> sign({
     required String email,
     required String password,
     required String name,

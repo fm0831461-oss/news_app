@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MyWidget extends StatelessWidget {
+class DetailsScreen extends StatelessWidget {
   const new({super.key});
 
   @override

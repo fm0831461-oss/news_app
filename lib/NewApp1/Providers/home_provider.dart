@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/Models/artical_model.dart';
-import 'package:news_app/Services/home_services.dart';
+import 'package:news_app/NewApp1/Models/artical_model.dart';
+import 'package:news_app/NewApp1/Services/home_services.dart';
 
 class HomeProvider extends ChangeNotifier {
   Articles? dataModel;

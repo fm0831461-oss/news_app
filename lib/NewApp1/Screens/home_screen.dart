@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/Providers/home_provider.dart';
-import 'package:news_app/Widgets/custom_home.dart';
+import 'package:news_app/NewApp1/Providers/home_provider.dart';
+import 'package:news_app/NewApp1/Widgets/custom_home.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
