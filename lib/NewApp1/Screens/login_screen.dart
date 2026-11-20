@@ -12,7 +12,6 @@ class LoginScreens extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final providerObject = context.read<AuthProvider>();
     final providerObject = context.watch<AuthProvider>();
 
     return Scaffold(

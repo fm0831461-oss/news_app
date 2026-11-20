@@ -4,8 +4,6 @@ import 'package:news_app/NewApp1/Services/auth_services.dart';
 
 class AuthProvider extends ChangeNotifier {
   AuthModel? auth;
-  final emailController = TextEditingController();
-  final passController = TextEditingController();
   bool isPass = true;
   Future<bool> userLogin({
     required String email,

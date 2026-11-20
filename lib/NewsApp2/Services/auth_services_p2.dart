@@ -19,4 +19,28 @@ class AuthServicesP2 {
       throw Exception("other error${other.toString()}");
     }
   }
+
+  static Future<AuthModelP2> sign({
+    required String email,
+    required String password,
+    required String name,
+    required String phone,
+  }) async {
+    try {
+      Response response = await dio.post(
+        "https://elsewedyteam.runasp.net/api/Register/AddUser",
+        data: {
+          "Email": email,
+          "Password": password,
+          "Phone": phone,
+          "Name": name,
+        },
+      );
+      return AuthModelP2.fromjson(response.data);
+    } on DioException catch (dioError) {
+      throw Exception(dioError.message);
+    } catch (other) {
+      throw Exception(("Other Error ${other.toString()}"));
+    }
+  }
 }
